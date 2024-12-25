@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ElementalMatcherApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  @State var game = ElementalMatcherGame()
+
+  var body: some Scene {
+    WindowGroup {
+      ElementalMatcherView(viewModel: game)
     }
+  }
 }
